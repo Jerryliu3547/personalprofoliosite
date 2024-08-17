@@ -28,8 +28,8 @@ const Hero = () => {
             </p>
             <TextGenerateEffect className='text-center text-[5px] md:text-[15px] ' filter={false} words='CS Scientist & Engineer & Entrepreneur | Passionate about Data Science & AI | MSCS, GATech | OSU Engineering Grad | IBM Certified in Machine Learning & Data Science | Seeking to leverage technical & business expertise to drive impactful solutions.' />
 
-            <div className='flex justify-center items-center mt-8'>
-              <MagicButton text='Contact Me' icon={<NearMeIcon/>} position='right' />
+            <div className='flex justify-center items-center mt-10'>
+              <MagicButton text='Contact Me' icon={<NearMeIcon/>} position='right' className='mt-10' />
             </div>
 
 
