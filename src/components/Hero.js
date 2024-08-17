@@ -26,10 +26,12 @@ const Hero = () => {
             <p className="text-center text-xl sm:text-4xl font-bold  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8">
               Master Science in Computer Science
             </p>
+            
             <TextGenerateEffect className='text-center text-[5px] md:text-[15px] ' filter={false} words='CS Scientist & Engineer & Entrepreneur | Passionate about Data Science & AI | MSCS, GATech | OSU Engineering Grad | IBM Certified in Machine Learning & Data Science | Seeking to leverage technical & business expertise to drive impactful solutions.' />
 
+
             <div className='flex justify-center items-center mt-10'>
-              <MagicButton text='Contact Me' icon={<NearMeIcon/>} position='right' className='mt-10' />
+              <MagicButton text='Contact Me' icon={<NearMeIcon/>} position='right' />
             </div>
 
 
