@@ -60,7 +60,7 @@ const NavBar = () => {
             </MenuItem>
             <MenuItem setActive={setActive} active={active} item="ABout Me">
               <div className="flex flex-col space-y-4 text-sm">
-                <HoveredLink href="/hobby">Education</HoveredLink>
+                <HoveredLink href="/education">Education</HoveredLink>
                 <HoveredLink href="/individual">Experience</HoveredLink>
                 <HoveredLink href="/team">License & Certifications</HoveredLink>
                 <HoveredLink href="/enterprise">Skills</HoveredLink>
