@@ -81,7 +81,7 @@ const page = () => {
             {gaSkills.map((skill, index) => {
               return (
       
-                  <span className="text-center text-sm border font-light dark:border-white/[0.2] border-black/[0.2] rounded-full mt-4 text-black dark:text-white px-2 py-0.5">{skill}</span>
+                  <span key={index} className="text-center text-sm border font-light dark:border-white/[0.2] border-black/[0.2] rounded-full mt-4 text-black dark:text-white px-2 py-0.5">{skill}</span>
               );
             })}
 
