@@ -23,6 +23,8 @@ module.exports = {
       },
     },
     extend: {
+
+      
       colors: {
         black: {
           DEFAULT: "#000",
@@ -79,6 +81,15 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        "aurora": {
+            from: {
+              backgroundPosition: "50% 50%, 50% 50%",
+            },
+            to: {
+              backgroundPosition: "350% 50%, 350% 50%",
+            },
+          },
+        
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -145,6 +156,8 @@ module.exports = {
         },
       },
       animation: {
+      
+        aurora: "aurora 60s linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         spotlight: "spotlight 2s ease .75s 1 forwards",
