@@ -2,8 +2,6 @@ import React from 'react'
 import { cn } from "../../lib/utils";
 import BackgroundEffect2 from '../../components/background2.js'
 import { BentoGrid, BentoGridItem } from "../../components/ui/bento-grid.js";
-import { motion } from "framer-motion";
-import Image from 'next/image'
 import {Stack, Avatar} from '@mui/material'
 import {sourcelist1, sourcelist2, sourcelist3, sourcelist4, sourcelist5, sourcelist6, sourcelist7, sourcelist8, sourcelist9
 } from './components/sourcelist'
@@ -13,7 +11,7 @@ import {sourcelist1, sourcelist2, sourcelist3, sourcelist4, sourcelist5, sourcel
 const page = () => {
   const Skeleton = ({ sources=[] }) => (
     <div className="flex items-center justify-center w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100">
-      <Stack direction="row" justifyContent="center" alignItems="center" gap={2}>
+      <Stack direction="row" justifyContent="center" alignItems="center" gap={2} flexWrap='wrap' >
         {sources.map((source, index) => (
           <Avatar variant='rounded' key={index} src={source} sx={{ width: 80, height: 80, borderRadius: '50%' }} />
         ))}
@@ -46,14 +44,14 @@ const page = () => {
     {
       title: "BackEnd",
       description:
-        "Express",
+        "Express & Node.JS",
       header: <Skeleton sources={sourcelist4} />,
 
     },
     {
       title: "Database",
       description:
-        "MongoDB & SQL",
+        "MongoDB,SQL, MySQL, Mongoose",
       header: <Skeleton sources={sourcelist5} />,
 
     },
