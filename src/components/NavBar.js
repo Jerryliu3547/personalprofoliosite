@@ -61,9 +61,9 @@ const NavBar = () => {
             <MenuItem setActive={setActive} active={active} item="ABout Me">
               <div className="flex flex-col space-y-4 text-sm">
                 <HoveredLink href="/education">Education</HoveredLink>
-                <HoveredLink href="/individual">Experience</HoveredLink>
-                <HoveredLink href="/team">License & Certifications</HoveredLink>
-                <HoveredLink href="/enterprise">Skills</HoveredLink>
+                <HoveredLink href="/experience">Experience</HoveredLink>
+                <HoveredLink href="/liscense_certification">License & Certifications</HoveredLink>
+                <HoveredLink href="/skills">Skills</HoveredLink>
               </div>
             </MenuItem>
           </Menu>
