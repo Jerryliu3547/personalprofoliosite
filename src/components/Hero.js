@@ -21,7 +21,7 @@ const Hero = () => {
 
         <div className='relative z-20 felx flex-col items-center justify-center '>
             <p className="text-center text-6xl sm:text-8xl font-bold  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8">
-              Hi I'm <span className='whitespace-nowrap '>Dianze Liu</span> 
+              Hi I&apos;m <span className='whitespace-nowrap '>Dianze Liu</span> 
             </p>
             <p className="text-center text-xl sm:text-4xl font-bold  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8">
               Master Science in Computer Science
