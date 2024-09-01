@@ -22,18 +22,18 @@ const NavBar = () => {
         >
           <Menu setActive={setActive}>
             <Link href="/" className="text-white pr-4">Home</Link>
-            <MenuItem setActive={setActive} active={active} item="Blog">
+            <MenuItem setActive={setActive} active={active} item="Specialty">
               <div className="flex flex-col space-y-4 text-sm">
                 <HoveredLink href="/web-dev">Computer System</HoveredLink>
                 <HoveredLink href="/interface-design">Artificial Intelligence</HoveredLink>
-                <HoveredLink href="/seo">Machine Learning</HoveredLink>
+                <HoveredLink href="/seo">Web Development</HoveredLink>
                 <HoveredLink href="/branding">Trading</HoveredLink>
               </div>
             </MenuItem>
             <MenuItem setActive={setActive} active={active} item="Profolios">
               <div className="  text-sm grid grid-cols-1 md:grid-cols-2 gap-10 p-4">
                 <ProductItem
-                  title="Algochurn"
+                  title="REAAI"
                   href="https://algochurn.com"
                   src="https://assets.aceternity.com/demos/algochurn.webp"
                   description="Prepare for tech interviews like never before."
