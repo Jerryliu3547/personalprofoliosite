@@ -19,18 +19,20 @@ const Hero = () => {
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black-100 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
 
 
-        <div className='relative z-20 felx flex-col items-center justify-center '>
-          <p className="text-center text-6xl sm:text-8xl font-bold  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8">
-            Hi I&apos;m <span className='whitespace-nowrap '>Dianze Liu</span>
+        <div className='relative z-20 flex flex-col items-center justify-center px-4 max-w-4xl mx-auto pt-12 sm:pt-0'>
+          <p className="text-center text-3xl sm:text-6xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-3 sm:py-8">
+            Hi I&apos;m <span className='whitespace-nowrap'>Dianze Liu</span>
           </p>
-          <p className="text-center text-xl sm:text-4xl font-bold  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8">
+          <p className="text-center text-lg sm:text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-2 sm:py-6">
             Applied Machine Learning Engineer
           </p>
 
-          <TextGenerateEffect className='text-center text-[5px] md:text-[15px] ' filter={false} words='CS Scientist & Engineer & Entrepreneur | Passionate about AI | MSCS, GATech | OSU Engineering Grad | IBM Certified in Machine Learning & Data Science | Seeking to leverage technical & business expertise to drive impactful solutions.' />
+          <div className="max-w-2xl mx-auto">
+            <TextGenerateEffect className='text-center text-xs sm:text-base md:text-lg leading-relaxed text-neutral-300' filter={false} words='CS Scientist & Engineer & Entrepreneur | Passionate about AI | MSCS, GATech | OSU Engineering Grad | IBM Certified in Machine Learning & Data Science | Seeking to leverage technical & business expertise to drive impactful solutions.' />
+          </div>
 
 
-          <div className='flex justify-center items-center mt-10'>
+          <div className='flex justify-center items-center mt-8 sm:mt-10'>
             <a
               href="https://www.linkedin.com/in/dianze-liu-bb7242116/"
               target="_blank"

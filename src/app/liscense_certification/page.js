@@ -159,38 +159,38 @@ const LicensePage = () => {
       <div className="fixed pointer-events-none inset-0 flex items-center justify-center bg-black-100 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] z-0" />
 
       {/* Main Container */}
-      <div className="relative z-10 w-full pt-32 sm:pt-40 pb-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 w-full pt-24 sm:pt-40 pb-16 sm:pb-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-10">
-          <p className="text-center text-4xl sm:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-4">
+        <div className="text-center mb-8 sm:mb-10">
+          <p className="text-center text-3xl sm:text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-2 sm:py-4">
             Licenses & Certifications
           </p>
-          <p className="text-neutral-400 text-sm sm:text-base max-w-2xl mx-auto mt-2">
+          <p className="text-neutral-400 text-xs sm:text-base max-w-2xl mx-auto mt-1 sm:mt-2">
             Verified industry credentials in Artificial Intelligence, Graph RAG, Machine Learning, Cloud Containerization, and Software Engineering.
           </p>
 
           {/* LinkedIn Direct CTA */}
-          <div className="mt-6">
+          <div className="mt-4 sm:mt-6">
             <Link
               href={LINKEDIN_CERT_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium text-sm hover:from-purple-500 hover:to-blue-500 hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all transform hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium text-xs sm:text-sm hover:from-purple-500 hover:to-blue-500 hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all transform hover:-translate-y-0.5"
             >
               <WorkspacePremiumIcon fontSize="small" />
-              <span>Verify All Credentials on LinkedIn</span>
+              <span>Verify Credentials on LinkedIn</span>
               <LaunchIcon fontSize="small" />
             </Link>
           </div>
         </div>
 
-        {/* Category Filters */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+        {/* Category Filters (Horizontally Scrollable on Mobile) */}
+        <div className="flex flex-nowrap sm:flex-wrap items-center justify-start sm:justify-center gap-2 mb-8 sm:mb-12 overflow-x-auto pb-2 sm:pb-0 scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0">
           {categories.map((cat, idx) => (
             <button
               key={idx}
               onClick={() => setSelectedCategory(cat)}
-              className={`text-xs sm:text-sm px-4 py-2 rounded-full border transition-all ${
+              className={`text-xs sm:text-sm px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full border transition-all shrink-0 ${
                 selectedCategory === cat
                   ? 'bg-purple-600 text-white border-purple-500 shadow-[0_0_15px_rgba(168,85,247,0.4)]'
                   : 'bg-black/40 text-neutral-400 border-white/10 hover:border-white/30 hover:text-white'
@@ -202,19 +202,19 @@ const LicensePage = () => {
         </div>
 
         {/* Certificates Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8">
           {filteredCerts.map((cert, index) => (
             <div
               key={index}
-              className="group relative border border-white/10 dark:border-white/15 bg-black/60 backdrop-blur-xl rounded-2xl p-6 transition-all duration-300 hover:border-purple-500/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] flex flex-col justify-between"
+              className="group relative border border-white/10 dark:border-white/15 bg-black/60 backdrop-blur-xl rounded-2xl p-5 sm:p-6 transition-all duration-300 hover:border-purple-500/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] flex flex-col justify-between"
             >
               {/* Top Accent Line */}
               <div className="absolute top-0 left-6 right-6 h-[1px] bg-gradient-to-r from-transparent via-purple-500/30 to-transparent group-hover:via-purple-500/80 transition-all duration-500" />
 
               <div>
                 {/* Header: Logo + Issuer & Date */}
-                <div className="flex items-start gap-4">
-                  <div className={`w-14 h-14 rounded-xl ${cert.logoBg} border border-white/20 flex items-center justify-center shrink-0 shadow-md group-hover:scale-105 transition-transform overflow-hidden`}>
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl ${cert.logoBg} border border-white/20 flex items-center justify-center shrink-0 shadow-md group-hover:scale-105 transition-transform overflow-hidden`}>
                     <Image
                       src={cert.logo}
                       alt={`${cert.issuer} Logo`}
@@ -224,15 +224,15 @@ const LicensePage = () => {
                     />
                   </div>
 
-                  <div className="flex-1">
-                    <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-purple-300 transition-colors leading-snug">
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-base sm:text-xl font-bold text-white group-hover:text-purple-300 transition-colors leading-snug">
                       {cert.title}
                     </h3>
-                    <div className="flex items-center gap-2 mt-1 text-sm font-semibold text-purple-400">
+                    <div className="flex items-center gap-1.5 mt-1 text-xs sm:text-sm font-semibold text-purple-400">
                       <span>{cert.issuer}</span>
                       <VerifiedIcon fontSize="small" className="text-purple-400" />
                     </div>
-                    <div className="flex items-center gap-1.5 mt-1 text-xs text-neutral-400">
+                    <div className="flex items-center gap-1.5 mt-1 text-[11px] sm:text-xs text-neutral-400">
                       <CalendarTodayIcon fontSize="inherit" className="text-neutral-500" />
                       <span>{cert.issued}</span>
                     </div>
@@ -241,10 +241,10 @@ const LicensePage = () => {
 
                 {/* Credential ID */}
                 {cert.credentialId && (
-                  <div className="mt-4 p-2.5 rounded-lg bg-white/5 border border-white/10 flex items-center gap-2 text-xs font-mono text-neutral-300 overflow-x-auto">
+                  <div className="mt-4 p-2 sm:p-2.5 rounded-lg bg-white/5 border border-white/10 flex items-center gap-2 text-xs font-mono text-neutral-300 overflow-x-auto">
                     <KeyIcon fontSize="small" className="text-purple-400 shrink-0" />
                     <span className="text-neutral-400 shrink-0">ID:</span>
-                    <span className="truncate select-all text-neutral-200">{cert.credentialId}</span>
+                    <span className="truncate select-all text-neutral-200 break-all">{cert.credentialId}</span>
                   </div>
                 )}
 

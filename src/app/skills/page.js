@@ -42,8 +42,8 @@ const SkillsPage = () => {
           const isLangChain = imgSrc?.includes('langchain');
           const isSQL = imgSrc?.includes('SQL') || imgSrc?.includes('sql');
 
-          let avatarSize = sources.length > 3 ? 54 : (sources.length > 2 ? 66 : 76);
-          let padding = '4px';
+          let avatarSize = sources.length > 3 ? 44 : (sources.length > 2 ? 54 : 64);
+          let padding = '3px';
           let scale = 1;
 
           if (isPyTorch) {
@@ -51,20 +51,20 @@ const SkillsPage = () => {
             padding = '2px';
           } else if (isHuggingFace) {
             scale = 0.92;
-            padding = '5px';
+            padding = '4px';
           } else if (isLangChain) {
             scale = 1.1;
             padding = '2px';
           } else if (isMLflow) {
-            avatarSize = sources.length > 2 ? 72 : 82;
+            avatarSize = sources.length > 2 ? 58 : 70;
             scale = 1.25;
             padding = '2px';
           } else if (isAWS) {
-            avatarSize = sources.length > 2 ? 68 : 78;
-            padding = '4px';
+            avatarSize = sources.length > 2 ? 56 : 66;
+            padding = '3px';
           } else if (isSQL) {
             scale = 0.82;
-            padding = '6px';
+            padding = '5px';
           }
 
           let avatarBg = '#333333';
@@ -175,24 +175,24 @@ const SkillsPage = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 pt-36 sm:pt-44 md:pt-48 pb-24 text-white flex flex-col justify-center items-center w-full px-4 max-w-6xl mx-auto">
+      <div className="relative z-10 pt-24 sm:pt-44 md:pt-48 pb-16 sm:pb-24 text-white flex flex-col justify-center items-center w-full px-4 max-w-6xl mx-auto">
         {/* Title Header */}
-        <div className="text-center mb-8">
-          <p className="text-center text-5xl sm:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-4">
+        <div className="text-center mb-6 sm:mb-8">
+          <p className="text-center text-3xl sm:text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-2 sm:py-4">
             Technical Stack
           </p>
-          <p className="text-neutral-400 text-sm sm:text-base max-w-2xl mx-auto">
+          <p className="text-neutral-400 text-xs sm:text-base max-w-2xl mx-auto mt-1 sm:mt-2">
             Categorized technical capabilities spanning Artificial Intelligence, GenAI & RAG, High-Performance Systems, Web Development, and MLOps.
           </p>
         </div>
 
-        {/* Category Filter Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+        {/* Category Filter Tabs (Horizontally Scrollable on Mobile) */}
+        <div className="flex flex-nowrap sm:flex-wrap items-center justify-start sm:justify-center gap-2 mb-8 sm:mb-12 overflow-x-auto pb-2 sm:pb-0 scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0 w-full">
           {categories.map((cat, idx) => (
             <button
               key={idx}
               onClick={() => setSelectedCategory(cat)}
-              className={`text-xs sm:text-sm px-4 py-2 rounded-full border transition-all duration-200 ${
+              className={`text-xs sm:text-sm px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full border transition-all duration-200 shrink-0 ${
                 selectedCategory === cat
                   ? 'bg-purple-600 text-white border-purple-500 shadow-[0_0_15px_rgba(168,85,247,0.4)]'
                   : 'bg-black/40 text-neutral-400 border-white/10 hover:border-white/30 hover:text-white'

@@ -120,32 +120,32 @@ const ExperiencePage = () => {
       <div className="fixed pointer-events-none inset-0 flex items-center justify-center bg-black-100 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] z-0" />
 
       {/* Main Experience Content Container */}
-      <div className="relative z-10 w-full pt-32 sm:pt-40 pb-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 w-full pt-24 sm:pt-40 pb-16 sm:pb-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12 sm:mb-16">
-          <p className="text-center text-4xl sm:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-4">
+        <div className="text-center mb-8 sm:mb-16">
+          <p className="text-center text-3xl sm:text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-2 sm:py-4">
             Work Experience
           </p>
-          <p className="text-neutral-400 text-sm sm:text-base max-w-2xl mx-auto mt-2">
+          <p className="text-neutral-400 text-xs sm:text-base max-w-2xl mx-auto mt-1 sm:mt-2">
             A breakdown of my professional roles, leadership, research, and engineering achievements in AI, Machine Learning, and Data Science.
           </p>
         </div>
 
         {/* Experience List */}
-        <div className="space-y-10">
+        <div className="space-y-6 sm:space-y-10">
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="group relative border border-white/10 dark:border-white/15 bg-black/60 backdrop-blur-xl rounded-2xl p-6 sm:p-8 transition-all duration-300 hover:border-purple-500/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)]"
+              className="group relative border border-white/10 dark:border-white/15 bg-black/60 backdrop-blur-xl rounded-2xl p-5 sm:p-8 transition-all duration-300 hover:border-purple-500/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)]"
             >
               {/* Top Accent Gradient Line */}
               <div className="absolute top-0 left-8 right-8 h-[1px] bg-gradient-to-r from-transparent via-purple-500/30 to-transparent group-hover:via-purple-500/80 transition-all duration-500" />
 
               {/* Role & Company Header */}
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-white/10">
-                <div className="flex items-center gap-4">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-5 sm:pb-6 border-b border-white/10">
+                <div className="flex items-start sm:items-center gap-3 sm:gap-4">
                   {exp.logo ? (
-                    <div className="w-16 h-16 rounded-xl bg-white p-1 flex items-center justify-center shrink-0 shadow-md group-hover:scale-105 group-hover:ring-2 group-hover:ring-purple-500 transition-all overflow-hidden">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl bg-white p-1 flex items-center justify-center shrink-0 shadow-md group-hover:scale-105 group-hover:ring-2 group-hover:ring-purple-500 transition-all overflow-hidden">
                       <Image
                         src={exp.logo}
                         alt={`${exp.company} Logo`}
@@ -153,27 +153,27 @@ const ExperiencePage = () => {
                       />
                     </div>
                   ) : (
-                    <div className="w-16 h-16 rounded-xl bg-purple-900/40 border border-purple-500/40 text-purple-300 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl bg-purple-900/40 border border-purple-500/40 text-purple-300 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                       {exp.fallbackIcon}
                     </div>
                   )}
 
                   <div>
-                    <h2 className="text-xl sm:text-2xl font-bold text-white group-hover:text-purple-300 transition-colors">
+                    <h2 className="text-lg sm:text-2xl font-bold text-white group-hover:text-purple-300 transition-colors leading-tight">
                       {exp.role}
                     </h2>
-                    <span className="text-purple-400 font-semibold text-base sm:text-lg">
+                    <span className="text-purple-400 font-semibold text-xs sm:text-lg block mt-0.5">
                       @ {exp.company}
                     </span>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3 text-xs sm:text-sm text-neutral-400 flex-wrap">
-                  <div className="flex items-center gap-1 bg-neutral-900/80 px-3 py-1.5 rounded-full border border-white/10">
+                <div className="flex items-center gap-2 sm:gap-3 text-xs text-neutral-400 flex-wrap">
+                  <div className="flex items-center gap-1 bg-neutral-900/80 px-2.5 py-1 rounded-full border border-white/10">
                     <LocationOnIcon className="text-purple-400" fontSize="small" />
                     <span>{exp.location}</span>
                   </div>
-                  <div className="flex items-center gap-1 bg-neutral-900/80 px-3 py-1.5 rounded-full border border-white/10">
+                  <div className="flex items-center gap-1 bg-neutral-900/80 px-2.5 py-1 rounded-full border border-white/10">
                     <CalendarTodayIcon className="text-purple-400" fontSize="small" />
                     <span>{exp.period}</span>
                   </div>
@@ -181,11 +181,11 @@ const ExperiencePage = () => {
               </div>
 
               {/* Bullet Points */}
-              <div className="mt-6 space-y-4">
+              <div className="mt-4 sm:mt-6 space-y-3 sm:space-y-4">
                 {exp.highlights.map((item, hIdx) => (
-                  <div key={hIdx} className="flex items-start gap-3">
-                    <span className="mt-1.5 w-2 h-2 rounded-full bg-purple-500 shrink-0 group-hover:scale-125 transition-transform" />
-                    <div className="text-sm sm:text-base leading-relaxed text-neutral-300">
+                  <div key={hIdx} className="flex items-start gap-2.5">
+                    <span className="mt-1.5 w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-purple-500 shrink-0 group-hover:scale-125 transition-transform" />
+                    <div className="text-xs sm:text-base leading-relaxed text-neutral-300">
                       <strong className="text-white font-semibold">
                         {item.title}:
                       </strong>{" "}
@@ -196,14 +196,14 @@ const ExperiencePage = () => {
               </div>
 
               {/* Technologies */}
-              <div className="mt-8 pt-4 border-t border-white/5 flex flex-wrap items-center gap-2">
+              <div className="mt-6 sm:mt-8 pt-4 border-t border-white/5 flex flex-wrap items-center gap-2">
                 <span className="text-xs font-semibold text-neutral-400 flex items-center gap-1 mr-2">
                   <CodeIcon fontSize="small" className="text-purple-400" /> Technologies:
                 </span>
                 {exp.skills.map((skill, sIdx) => (
                   <span
                     key={sIdx}
-                    className="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-neutral-300 hover:border-purple-500/40 hover:text-white transition-colors"
+                    className="text-xs px-2.5 py-1 rounded-full border border-white/10 bg-white/5 text-neutral-300 hover:border-purple-500/40 hover:text-white transition-colors"
                   >
                     {skill}
                   </span>
