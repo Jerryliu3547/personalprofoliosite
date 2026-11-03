@@ -4,6 +4,7 @@ import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
 import Link from "next/link";
 import Image from "next/image";
 import StockDeckImg from "../../public/personal_stock_deck.png";
+import ReaaiImg from "../../public/reaai_landing.png";
 import { cn } from "../lib/utils";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
@@ -19,8 +20,8 @@ const profolioItems = [
   },
   {
     title: "REAAI",
-    href: "https://algochurn.com",
-    src: "https://assets.aceternity.com/demos/algochurn.webp",
+    href: "https://reaai-web--reaai-9dfe5.us-central1.hosted.app/",
+    src: ReaaiImg,
     description: "Intelligent real estate assistant for property discovery & route optimization."
   },
   {
