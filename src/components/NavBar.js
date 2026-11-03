@@ -5,6 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import StockDeckImg from "../../public/personal_stock_deck.png";
 import ReaaiImg from "../../public/reaai_landing.png";
+import SpineTwinImg from "../../public/spinetwin.jpg";
+import AiVisualizerImg from "../../public/ai_term_visualizer.png";
 import { cn } from "../lib/utils";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
@@ -25,16 +27,16 @@ const profolioItems = [
     description: "Intelligent real estate assistant for property discovery & route optimization."
   },
   {
-    title: "Moonbeam",
-    href: "https://gomoonbeam.com",
-    src: "https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png",
-    description: "AI-powered writing platform to go from idea to article in minutes."
+    title: "SpineTwin",
+    href: "https://spinetwin.tech",
+    src: SpineTwinImg,
+    description: "Autonomous surgical AI & biomechanical simulation for spine surgery."
   },
   {
-    title: "Rogue",
-    href: "https://userogue.com",
-    src: "https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png",
-    description: "Respond to government RFPs and RFQs 10x faster using AI."
+    title: "AI Term Visualizer",
+    href: "https://jerryliu3547.github.io/Idea_Illustration/",
+    src: AiVisualizerImg,
+    description: "Interactive visual explorer for AI & LLM concepts, RL alignment, PEFT, and reasoning."
   }
 ];
 
